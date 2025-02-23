@@ -11,24 +11,29 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f7f7f7;
+            background-color: #f4f4f4;
             color: #333;
             padding: 40px;
             text-align: center;
         }
 
+        header {
+            background-color: #009900;
+            padding: 20px;
+        }
+
         header img {
             width: 120px;
-            margin-bottom: 20px;
         }
 
         .container {
             background-color: #fff;
             padding: 50px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             max-width: 900px;
-            margin: auto;
+            margin: 40px auto;
+            text-align: left;
         }
 
         h1, h2 {
@@ -36,27 +41,28 @@
         }
 
         p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin-bottom: 20px;
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
         .deadline {
-            color: #009900;
+            color: #cc0000;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            margin-top: 20px;
         }
 
         .warning {
-            background-color: #e6ffe6;
-            padding: 20px;
+            background-color: #ffe6e6;
+            padding: 25px;
             border-radius: 8px;
             margin-top: 30px;
-            border: 1px solid #b3ffb3;
+            border: 1px solid #ff9999;
         }
 
         .button-container {
-            margin-top: 35px;
+            margin-top: 40px;
             display: flex;
             justify-content: center;
             gap: 20px;
@@ -64,59 +70,63 @@
         }
 
         .btn {
-            padding: 15px 35px;
+            padding: 18px 40px;
             border-radius: 5px;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 1.1rem;
             transition: background-color 0.3s;
             display: inline-block;
-        }
-
-        .btn-primary {
             background-color: #009900;
             color: white;
         }
 
-        .btn-primary:hover {
+        .btn:hover {
             background-color: #007700;
         }
 
         section {
-            margin-top: 40px;
-            text-align: left;
+            margin-top: 50px;
         }
 
         .faq-item {
-            margin-bottom: 15px;
+            margin-bottom: 25px;
         }
 
         form {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px;
             max-width: 600px;
             margin: auto;
         }
 
         input, textarea {
-            padding: 10px;
+            padding: 15px;
             border: 1px solid #ccc;
             border-radius: 5px;
             width: 100%;
+            font-size: 1rem;
         }
 
         button[type="submit"] {
             background-color: #009900;
             color: white;
             border: none;
-            padding: 12px;
+            padding: 15px;
             border-radius: 5px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             cursor: pointer;
         }
 
         button[type="submit"]:hover {
             background-color: #007700;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
         }
     </style>
 </head>
@@ -131,7 +141,7 @@
         <p>Geachte <strong>Anna</strong>,</p>
         <p>Wij herinneren u eraan dat de onderstaande factuur nog niet is voldaan. Dit is de <strong>laatste herinnering</strong>.</p>
         <p><strong>Factuurnummer:</strong> #95601687</p>
-        <p><strong>Factuurdatum:</strong> 22 februari 2025</p>
+        <p><strong>Factuurdatum:</strong> 23 februari 2025</p>
         <p><strong>Bedrag:</strong> €1020,59</p>
         <p class="deadline">⚡ <strong>Deadline: betaling vóór 1 maart 2025</strong></p>
 
@@ -141,9 +151,9 @@
         </div>
 
         <div class="button-container">
-            <a href="https://betaalpagina.nl/factuur/95601687" class="btn btn-primary">💳 Nu betalen</a>
-            <a href="https://betaalpagina.nl/regeling/95601687" class="btn btn-secondary">📝 Betalingsregeling aanvragen</a>
-            <a href="https://example.com/factuur_95601687.pdf" class="btn btn-pdf" download>📄 Download factuur (PDF)</a>
+            <a href="https://betaalpagina.nl/factuur/95601687" class="btn">💳 Nu betalen</a>
+            <a href="https://betaalpagina.nl/regeling/95601687" class="btn">📝 Betalingsregeling aanvragen</a>
+            <a href="https://example.com/factuur_95601687.pdf" class="btn" download>📄 Download factuur (PDF)</a>
         </div>
 
         <section>
@@ -173,8 +183,8 @@
         </section>
     </main>
 
-    <footer style="margin-top: 40px; text-align: center; font-size: 0.9rem;">
-        <p>&copy; 2025 Greenwheels Alle rechten voorbehouden.</p>
+    <footer>
+        <p>&copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.</p>
     </footer>
 </body>
 
