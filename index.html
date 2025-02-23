@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Laatste herinnering voor openstaande factuur. Voorkom extra kosten en betaal op tijd.">
+    <meta name="keywords" content="factuur, betaling, herinnering, incassobureau, openstaande betaling">
+    <meta name="author" content="Jouw Bedrijf">
+    <title>Laatste Herinnering - Factuur Anna</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #009900;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .deadline {
+            color: #009900;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .warning {
+            background-color: #e6ffe6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border: 1px solid #b3ffb3;
+        }
+
+        .button-container {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: #009900;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #007700;
+        }
+
+        .btn-secondary {
+            background-color: #f2f2f2;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+
+        .btn-secondary:hover {
+            background-color: #e6e6e6;
+        }
+
+        .btn-pdf {
+            background-color: #f9f9f9;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+
+        .btn-pdf:hover {
+            background-color: #ececec;
+        }
+
+        @media (max-width: 600px) {
+            .button-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            fetch('https://api64.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    console.log('IP-adres van bezoeker:', data.ip);
+                    fetch('/log_ip', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ ip: data.ip })
+                    });
+                })
+                .catch(error => console.error('Fout bij ophalen IP-adres:', error));
+        };
+    </script>
+</head>
+
+<body>
+    <main class="container">
+        <h1>⚠️ Laatste Herinnering: Openstaande Factuur</h1>
+        <p>Geachte <strong>Anna</strong>,</p>
+        <p>Wij herinneren u eraan dat de onderstaande factuur nog niet is voldaan. Dit is de <strong>laatste herinnering</strong>.</p>
+        <p><strong>Factuurnummer:</strong> #95601687</p>
+        <p><strong>Factuurdatum:</strong> 22 februari 2025</p>
+        <p><strong>Bedrag:</strong> €1020,59</p>
+        <p class="deadline">⚡ <strong>Deadline: betaling vóór 1 maart 2025</strong></p>
+
+        <section class="warning">
+            <p>Indien wij <strong>geen betaling vóór 1 maart 2025</strong> ontvangen, zijn wij genoodzaakt om de vordering over te dragen aan een <strong>incassobureau</strong>. Hierbij zullen <strong>alle extra kosten</strong> volledig aan u worden doorberekend.</p>
+            <p>Voorkom extra kosten en regel de betaling op tijd.</p>
+        </section>
+
+        <div class="button-container">
+            <a href="https://betaalpagina.nl/factuur/95601687" class="btn btn-primary">💳 Nu betalen</a>
+            <a href="https://betaalpagina.nl/regeling/95601687" class="btn btn-secondary">📝 Betalingsregeling aanvragen</a>
+            <a href="factuur_95601687.pdf" class="btn btn-pdf" download>📄 Download factuur (PDF)</a>
+        </div>
+    </main>
+
+    <footer style="margin-top: 40px; text-align: center; font-size: 0.9rem;">
+        <p>&copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.</p>
+    </footer>
+</body>
+
+</html>
