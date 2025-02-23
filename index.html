@@ -4,65 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Laatste herinnering voor openstaande factuur. Voorkom extra kosten en betaal op tijd.">
-    <meta name="keywords" content="factuur, betaling, herinnering, incassobureau, openstaande betaling">
-    <meta name="author" content="Greenwheels">
-    <title>Laatste Herinnering - Factuur Anna</title>
+    <title>Factuur niet betaald: Laatste herinnering - Anna Luning</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f7f7f7;
             color: #333;
             padding: 40px;
             text-align: center;
         }
 
-        header {
+        .header {
             background-color: #009900;
-            padding: 20px;
+            padding: 30px;
         }
 
-        header img {
-            width: 250px; /* Logo vergroot */
+        .header img {
+            width: 200px;
         }
 
         .container {
             background-color: #fff;
             padding: 50px;
             border-radius: 10px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            max-width: 900px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
             margin: 40px auto;
             text-align: left;
         }
 
-        h1, h2 {
+        h1 {
             color: #009900;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
         }
 
         p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 20px;
-            line-height: 1.8;
+            line-height: 1.6;
         }
 
-        .deadline {
-            color: #cc0000;
+        .notice {
+            color: #000;
             font-weight: bold;
-            font-size: 1.3rem;
-            margin-top: 20px;
-        }
-
-        .warning {
-            background-color: #ffe6e6;
-            padding: 25px;
+            background-color: #f2f2f2;
+            padding: 20px;
             border-radius: 8px;
             margin-top: 30px;
-            border: 1px solid #ff9999;
+            border: 1px solid #ddd;
         }
 
         .button-container {
-            margin-top: 40px;
+            margin-top: 35px;
             display: flex;
             justify-content: center;
             gap: 20px;
@@ -70,22 +64,51 @@
         }
 
         .btn {
-            padding: 18px 40px;
+            padding: 15px 35px;
             border-radius: 5px;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: background-color 0.3s;
             display: inline-block;
+        }
+
+        .btn-primary {
             background-color: #009900;
             color: white;
         }
 
-        .btn:hover {
+        .btn-primary:hover {
             background-color: #007700;
         }
 
-        section {
-            margin-top: 50px;
+        .btn-secondary {
+            background-color: #f2f2f2;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+
+        .btn-secondary:hover {
+            background-color: #e6e6e6;
+        }
+
+        .btn-pdf {
+            background-color: #f9f9f9;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+
+        .btn-pdf:hover {
+            background-color: #ececec;
+        }
+
+        .faq-section {
+            margin-top: 40px;
+        }
+
+        .faq-section h2 {
+            color: #009900;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
         }
 
         .faq-item {
@@ -95,9 +118,9 @@
         form {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
             max-width: 600px;
-            margin: auto;
+            margin: 30px auto;
         }
 
         input, textarea {
@@ -122,7 +145,6 @@
             background-color: #007700;
         }
 
-        /* Volledig aangepaste footer */
         footer {
             background-color: #000;
             color: white;
@@ -130,131 +152,96 @@
             text-align: center;
         }
 
-        .footer-description {
-            font-size: 0.9rem;
-            margin-bottom: 30px;
-            color: #ddd;
-        }
-
-        .footer-links, .footer-info {
-            margin: 20px 0;
-        }
-
-        .footer-links a, .footer-info a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .footer-links a:hover, .footer-info a:hover {
-            text-decoration: underline;
-        }
-
-        .social-icons a {
-            margin: 0 10px;
-            color: white;
-            font-size: 1.5rem;
-            text-decoration: none;
-        }
-
         .footer-bottom {
             margin-top: 30px;
             font-size: 0.85rem;
             color: #aaa;
         }
+
+        @media (max-width: 600px) {
+            .button-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
     </style>
-    <script>
-        window.onload = function () {
-            fetch('/.netlify/functions/log_ip')
-                .then((response) => response.json())
-                .then((data) => console.log('IP gelogd:', data))
-                .catch((error) => console.error('Fout bij IP-logging:', error));
-        };
-    </script>
 </head>
 
 <body>
-    <header>
-        <img src="logo.png" alt="Greenwheels Logo">
-    </header>
+    <div class="header">
+        <img src="/path/to/logo.png" alt="Greenwheels Logo">
+    </div>
 
-    <main class="container">
-        <h1>Laatste Herinnering: Openstaande Factuur</h1>
-        <p>Geachte <strong>Anna</strong>,</p>
+    <div class="container">
+        <h1>Factuur niet betaald: Laatste herinnering</h1>
+        <p>Geachte <strong>Anna Luning</strong>,</p>
         <p>Wij herinneren u eraan dat de onderstaande factuur nog niet is voldaan. Dit is de <strong>laatste herinnering</strong>.</p>
         <p><strong>Factuurnummer:</strong> #95601687</p>
         <p><strong>Factuurdatum:</strong> 23 februari 2025</p>
         <p><strong>Bedrag:</strong> €1020,59</p>
-        <p class="deadline">Deadline: betaling vóór 1 maart 2025</p>
 
-        <div class="warning">
-            <p>Indien wij <strong>geen betaling vóór 1 maart 2025</strong> ontvangen, zijn wij genoodzaakt om de vordering over te dragen aan een <strong>incassobureau</strong>. Hierbij zullen <strong>alle extra kosten</strong> volledig aan u worden doorberekend.</p>
-            <p>Voorkom extra kosten en regel de betaling op tijd.</p>
+        <div class="notice">
+            <p>Indien wij voor 1 maart 2025 geen betaling ontvangen of een betalingsregeling hebben afgesproken met u, zijn wij genoodzaakt om de vordering over te dragen aan een incassobureau. Hierbij zullen alle extra kosten volledig aan u worden doorberekend.</p>
+            <p>Voorkom extra kosten en regel de betaling op tijd. Hieronder heeft u de keuze om de factuur direct via iDEAL te betalen. Daarnaast kunt u een betalingsregeling aanvragen. Tevens kunt u de factuur inzien.</p>
         </div>
 
         <div class="button-container">
-            <a href="https://betaalpagina.nl/factuur/95601687" class="btn">Nu betalen</a>
-            <a href="https://betaalpagina.nl/regeling/95601687" class="btn">Betalingsregeling aanvragen</a>
-            <a href="https://example.com/factuur_95601687.pdf" class="btn" download>Download factuur (PDF)</a>
+            <a href="#" class="btn btn-primary">💳 Nu betalen</a>
+            <a href="#" class="btn btn-secondary">📝 Betalingsregeling aanvragen</a>
+            <a href="/mnt/data/Factuur%2095601687.pdf" class="btn btn-pdf" target="_blank">📄 Download factuur (PDF)</a>
         </div>
 
-        <section>
+        <div class="faq-section">
             <h2>Veelgestelde Vragen (FAQ)</h2>
             <div class="faq-item">
-                <h3>Hoe kan ik betalen?</h3>
-                <p>U kunt eenvoudig betalen via de knop "Nu betalen" hierboven, welke u naar onze beveiligde betaalomgeving brengt.</p>
+                <p><strong>Hoe kan ik betalen?</strong><br> U kunt eenvoudig betalen via de knop "Nu betalen" hierboven.</p>
             </div>
             <div class="faq-item">
-                <h3>Wat gebeurt er als ik niet betaal voor de deadline?</h3>
-                <p>Als we geen betaling ontvangen vóór 1 maart 2025, dragen we de vordering over aan een incassobureau. Extra kosten zijn dan voor uw rekening.</p>
+                <p><strong>Wat gebeurt er als ik niet betaal?</strong><br> Indien wij geen betaling ontvangen, wordt de vordering overgedragen aan een incassobureau. Alle extra kosten zijn voor uw rekening.</p>
             </div>
             <div class="faq-item">
-                <h3>Kan ik een betalingsregeling treffen?</h3>
-                <p>Ja, klik op de knop "Betalingsregeling aanvragen" om een verzoek in te dienen.</p>
+                <p><strong>Kan ik een betalingsregeling treffen?</strong><br> Klik op de knop "Betalingsregeling aanvragen" om een verzoek in te dienen.</p>
             </div>
-        </section>
+            <div class="faq-item">
+                <p><strong>Ben je het niet eens met de inhoud van de factuur?</strong><br> Ben je het niet eens met de factuur, dan vragen we je dit te melden via ons contactformulier. Behandeling van een factuurklacht kan enkele dagen duren. Wil je toch blijven rijden? Betaal dan wel de factuur. Je ontvangt een correctie op je volgende factuur als de klacht terecht is.</p>
+            </div>
+            <div class="faq-item">
+                <p><strong>Heb je een vraag over de (tijdige) betaling van de factuur?</strong><br> Stuur ons je vraag via het contactformulier met vermelding van je klantnummer. Greenwheels werkt niet met betalingsregelingen.</p>
+            </div>
+        </div>
 
-        <section>
+        <div class="faq-section">
             <h2>Contactformulier</h2>
             <form action="/contact" method="POST">
                 <input type="text" name="naam" placeholder="Uw naam" required>
+                <input type="text" name="klantnummer" placeholder="Uw klantnummer" required>
                 <input type="email" name="email" placeholder="Uw e-mailadres" required>
                 <textarea name="bericht" rows="5" placeholder="Uw bericht" required></textarea>
                 <button type="submit">Verstuur Bericht</button>
             </form>
-        </section>
-    </main>
+        </div>
+    </div>
 
     <footer>
-        <p class="footer-description">
-            Sommige functionaliteiten en opties zijn afhankelijk van het tarief dat je hebt gekozen bij gebruik van de auto. Zie onze tarieven voor meer informatie.
-        </p>
         <div class="footer-links">
-            <a href="#">Auto huren</a>
-            <a href="#">Auto aanschaffen</a>
-            <a href="#">Auto & duurzaamheid</a>
-        </div>
-        <div class="footer-links">
-            <a href="#">Over Greenwheels</a>
+            <a href="#">Over Greenwheels</a> |
+            <a href="#">Pers</a> |
+            <a href="#">Gemeente</a> |
+            <a href="#">Nieuws</a> |
             <a href="#">Werken bij</a>
-            <a href="#">Pers</a>
-            <a href="#">Gemeente</a>
-            <a href="#">Vastgoed</a>
-            <a href="#">Nieuws</a>
         </div>
         <div class="footer-info">
-            <a href="#">Klantenservice</a> |
-            <a href="#">Algemene voorwaarden</a> |
-            <a href="#">Cookiebeleid</a> |
-            <a href="#">Privacy statement</a> |
+            <a href="#">Deelauto huren</a> |
             <a href="#">Disclaimer</a> |
-            <a href="#">Accountveiligheid</a>
+            <a href="#">Privacy- en cookiebeleid</a> |
+            <a href="#">Algemene voorwaarden</a> |
+            <a href="#">Klantenservice</a>
         </div>
         <div class="social-icons">
             <a href="#">LinkedIn</a>
             <a href="#">Facebook</a>
             <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
         </div>
         <div class="footer-bottom">
             Greenwheels 2025
