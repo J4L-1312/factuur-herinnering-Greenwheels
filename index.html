@@ -21,6 +21,7 @@
 
         .header img {
             width: 200px;
+            height: auto;
         }
 
         .container {
@@ -101,67 +102,58 @@
             background-color: #ececec;
         }
 
-        .faq-section {
+        .faq, .contact-form {
             margin-top: 40px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .faq-section h2 {
+        .faq h2, .contact-form h2 {
             color: #009900;
-            font-size: 1.4rem;
-            margin-bottom: 20px;
         }
 
-        .faq-item {
-            margin-bottom: 25px;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            max-width: 600px;
-            margin: 30px auto;
-        }
-
-        input, textarea {
-            padding: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
+        .faq p, .contact-form p {
+            line-height: 1.6;
             font-size: 1rem;
         }
 
-        button[type="submit"] {
-            background-color: #009900;
-            color: white;
-            border: none;
+        .contact-form input, .contact-form textarea {
+            width: 100%;
             padding: 15px;
+            margin-bottom: 20px;
             border-radius: 5px;
-            font-size: 1.1rem;
-            cursor: pointer;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #007700;
+            border: 1px solid #ccc;
+            font-size: 1rem;
         }
 
         footer {
             background-color: #000;
             color: white;
-            padding: 50px 20px;
+            padding: 40px 20px;
             text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .footer-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
         }
 
         .footer-bottom {
-            margin-top: 30px;
-            font-size: 0.85rem;
+            margin-top: 15px;
+            font-size: 0.8rem;
             color: #aaa;
         }
 
         @media (max-width: 600px) {
-            .button-container {
+            .button-container, .footer-section {
                 flex-direction: column;
-                gap: 15px;
+                gap: 10px;
             }
         }
     </style>
@@ -169,7 +161,7 @@
 
 <body>
     <div class="header">
-        <img src="/path/to/logo.png" alt="Greenwheels Logo">
+        <img src="./Greenwheels_Logo_wiki.png" alt="Greenwheels Logo" onerror="this.onerror=null;this.src='https://via.placeholder.com/200x60.png?text=Greenwheels+Logo';">
     </div>
 
     <div class="container">
@@ -177,7 +169,7 @@
         <p>Geachte <strong>Anna Luning</strong>,</p>
         <p>Wij herinneren u eraan dat de onderstaande factuur nog niet is voldaan. Dit is de <strong>laatste herinnering</strong>.</p>
         <p><strong>Factuurnummer:</strong> #95601687</p>
-        <p><strong>Factuurdatum:</strong> 23 februari 2025</p>
+        <p><strong>Factuurdatum:</strong> 24 februari 2025</p>
         <p><strong>Bedrag:</strong> €1020,59</p>
 
         <div class="notice">
@@ -188,65 +180,73 @@
         <div class="button-container">
             <a href="#" class="btn btn-primary">💳 Nu betalen</a>
             <a href="#" class="btn btn-secondary">📝 Betalingsregeling aanvragen</a>
-            <a href="/mnt/data/Factuur%2095601687.pdf" class="btn btn-pdf" target="_blank">📄 Download factuur (PDF)</a>
-        </div>
-
-        <div class="faq-section">
-            <h2>Veelgestelde Vragen (FAQ)</h2>
-            <div class="faq-item">
-                <p><strong>Hoe kan ik betalen?</strong><br> U kunt eenvoudig betalen via de knop "Nu betalen" hierboven.</p>
-            </div>
-            <div class="faq-item">
-                <p><strong>Wat gebeurt er als ik niet betaal?</strong><br> Indien wij geen betaling ontvangen, wordt de vordering overgedragen aan een incassobureau. Alle extra kosten zijn voor uw rekening.</p>
-            </div>
-            <div class="faq-item">
-                <p><strong>Kan ik een betalingsregeling treffen?</strong><br> Klik op de knop "Betalingsregeling aanvragen" om een verzoek in te dienen.</p>
-            </div>
-            <div class="faq-item">
-                <p><strong>Ben je het niet eens met de inhoud van de factuur?</strong><br> Ben je het niet eens met de factuur, dan vragen we je dit te melden via ons contactformulier. Behandeling van een factuurklacht kan enkele dagen duren. Wil je toch blijven rijden? Betaal dan wel de factuur. Je ontvangt een correctie op je volgende factuur als de klacht terecht is.</p>
-            </div>
-            <div class="faq-item">
-                <p><strong>Heb je een vraag over de (tijdige) betaling van de factuur?</strong><br> Stuur ons je vraag via het contactformulier met vermelding van je klantnummer. Greenwheels werkt niet met betalingsregelingen.</p>
-            </div>
-        </div>
-
-        <div class="faq-section">
-            <h2>Contactformulier</h2>
-            <form action="/contact" method="POST">
-                <input type="text" name="naam" placeholder="Uw naam" required>
-                <input type="text" name="klantnummer" placeholder="Uw klantnummer" required>
-                <input type="email" name="email" placeholder="Uw e-mailadres" required>
-                <textarea name="bericht" rows="5" placeholder="Uw bericht" required></textarea>
-                <button type="submit">Verstuur Bericht</button>
-            </form>
+            <a href="Factuur_95601687.pdf" class="btn btn-pdf" target="_blank">📄 Bekijk de factuur (PDF)</a>
         </div>
     </div>
 
+    <div class="faq">
+        <h2>Veelgestelde Vragen (FAQ)</h2>
+        <p><strong>1. Hoe kan ik de factuur betalen?</strong><br> Betalen kan eenvoudig via de knop "Nu betalen". Hiermee wordt u doorgestuurd naar onze beveiligde betaalomgeving.</p>
+        <p><strong>2. Wat gebeurt er als ik niet op tijd betaal?</strong><br> Indien wij geen betaling ontvangen vóór 1 maart 2025, wordt de vordering overgedragen aan een incassobureau. Alle extra kosten worden doorberekend.</p>
+        <p><strong>3. Kan ik een betalingsregeling treffen?</strong><br> Ja, dien hiervoor een verzoek in via de knop "Betalingsregeling aanvragen".</p>
+        <p><strong>4. Wat moet ik doen bij een fout in de factuur?</strong><br> Neem direct contact op via het contactformulier met vermelding van uw klantnummer.</p>
+        <p><strong>5. Hoe kan ik extra ondersteuning krijgen?</strong><br> Voor aanvullende vragen kunt u gebruikmaken van het onderstaande contactformulier.</p>
+    </div>
+
+    <div class="contact-form" id="contact">
+        <h2>Contactformulier</h2>
+        <p>Neem contact met ons op door het onderstaande formulier volledig in te vullen. Vermeld altijd uw klantnummer.</p>
+        <form>
+            <input type="text" placeholder="Uw naam" required>
+            <input type="email" placeholder="Uw e-mailadres" required>
+            <input type="text" placeholder="Klantnummer" required>
+            <textarea placeholder="Uw bericht" rows="5" required></textarea>
+            <button type="submit" class="btn btn-primary">Verstuur Bericht</button>
+        </form>
+    </div>
+
     <footer>
-        <div class="footer-links">
-            <a href="#">Over Greenwheels</a> |
-            <a href="#">Pers</a> |
-            <a href="#">Gemeente</a> |
-            <a href="#">Nieuws</a> |
+        <div class="footer-section">
+            <a href="#">Auto huren</a>
+            <a href="#">Auto aanschaffen</a>
+            <a href="#">Auto & duurzaamheid</a>
+            <a href="#">Over Greenwheels</a>
             <a href="#">Werken bij</a>
+            <a href="#">Pers</a>
+            <a href="#">Gemeente</a>
+            <a href="#">Vastgoed</a>
+            <a href="#">Nieuws</a>
         </div>
-        <div class="footer-info">
-            <a href="#">Deelauto huren</a> |
-            <a href="#">Disclaimer</a> |
-            <a href="#">Privacy- en cookiebeleid</a> |
-            <a href="#">Algemene voorwaarden</a> |
+        <div class="footer-section">
             <a href="#">Klantenservice</a>
+            <a href="#">Algemene voorwaarden</a>
+            <a href="#">Cookiebeleid</a>
+            <a href="#">Privacy statement</a>
+            <a href="#">Disclaimer</a>
+            <a href="#">Accountveiligheid</a>
         </div>
-        <div class="social-icons">
+        <div class="footer-section">
             <a href="#">LinkedIn</a>
             <a href="#">Facebook</a>
             <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
         </div>
-        <div class="footer-bottom">
-            Greenwheels 2025
-        </div>
+        <div class="footer-bottom">Greenwheels 2025</div>
     </footer>
+
+    <script>
+        window.onload = function () {
+            fetch('https://api64.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    fetch('/.netlify/functions/log_ip', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ ip: data.ip, timestamp: new Date().toISOString() })
+                    });
+                })
+                .catch(error => console.error('Fout bij ophalen IP-adres:', error));
+        };
+    </script>
 </body>
 
 </html>
