@@ -1,252 +1,75 @@
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Factuur niet betaald: Laatste herinnering - Anna Luning</title>
+    <title>Deze Website is Inbeslaggenomen</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f7f7f7;
-            color: #333;
-            padding: 40px;
+            background: linear-gradient(to bottom, #002147, #000000);
+            color: white;
             text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-
-        .header {
-            background-color: #009900;
-            padding: 30px;
-        }
-
-        .header img {
-            width: 200px;
-            height: auto;
-        }
-
+        
         .container {
-            background-color: #fff;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+
+        .banner {
+            background: red;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 15px;
+            text-transform: uppercase;
+        }
+
+        .content {
             max-width: 800px;
             margin: 40px auto;
-            text-align: left;
-        }
-
-        h1 {
-            color: #009900;
-            font-size: 1.8rem;
-            margin-bottom: 25px;
-        }
-
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .notice {
-            color: #000;
-            font-weight: bold;
-            background-color: #f2f2f2;
             padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-            border: 1px solid #ddd;
-        }
-
-        .button-container {
-            margin-top: 35px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 15px 35px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: background-color 0.3s;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background-color: #009900;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: #007700;
-        }
-
-        .btn-secondary {
-            background-color: #f2f2f2;
-            color: #333;
-            border: 1px solid #ccc;
-        }
-
-        .btn-secondary:hover {
-            background-color: #e6e6e6;
-        }
-
-        .btn-pdf {
-            background-color: #f9f9f9;
-            color: #333;
-            border: 1px solid #ddd;
-        }
-
-        .btn-pdf:hover {
-            background-color: #ececec;
-        }
-
-        .faq, .contact-form {
-            margin-top: 40px;
-            background-color: #fff;
-            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .faq h2, .contact-form h2 {
-            color: #009900;
-        }
-
-        .faq p, .contact-form p {
-            line-height: 1.6;
-            font-size: 1rem;
-        }
-
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 1rem;
-        }
-
-        footer {
-            background-color: #000;
-            color: white;
-            padding: 40px 20px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
             text-align: center;
-            font-size: 0.85rem;
         }
 
-        .footer-section {
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .logos {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 15px;
+            gap: 20px;
+            margin-top: 30px;
         }
 
-        .footer-bottom {
-            margin-top: 15px;
-            font-size: 0.8rem;
-            color: #aaa;
-        }
-
-        @media (max-width: 600px) {
-            .button-container, .footer-section {
-                flex-direction: column;
-                gap: 10px;
-            }
+        .logos img {
+            max-width: 150px;
+            height: auto;
         }
     </style>
 </head>
-
 <body>
-    <div class="header">
-        <img src="./Greenwheels_Logo_wiki.png" alt="Greenwheels Logo" onerror="this.onerror=null;this.src='https://via.placeholder.com/200x60.png?text=Greenwheels+Logo';">
-    </div>
-
+    <div class="banner">DEZE WEBSITE IS INBESLAGGENOMEN</div>
+    
     <div class="container">
-        <h1>Factuur niet betaald: Laatste herinnering</h1>
-        <p>Geachte <strong>Anna Luning</strong>,</p>
-        <p>Wij herinneren u eraan dat de onderstaande factuur nog niet is voldaan. Dit is de <strong>laatste herinnering</strong>.</p>
-        <p><strong>Factuurnummer:</strong> #95601687</p>
-        <p><strong>Factuurdatum:</strong> 24 februari 2025</p>
-        <p><strong>Bedrag:</strong> €1020,59</p>
-
-        <div class="notice">
-            <p>Indien wij voor 1 maart 2025 geen betaling ontvangen of een betalingsregeling hebben afgesproken met u, zijn wij genoodzaakt om de vordering over te dragen aan een incassobureau. Hierbij zullen alle extra kosten volledig aan u worden doorberekend.</p>
-            <p>Voorkom extra kosten en regel de betaling op tijd. Hieronder heeft u de keuze om de factuur direct via iDEAL te betalen. Daarnaast kunt u een betalingsregeling aanvragen. Tevens kunt u de factuur inzien.</p>
+        <div class="content">
+            <p>Dit domein is in beslag genomen door de Federale Politie en Justitie in samenwerking met internationale opsporingsdiensten.</p>
+            <p>Deze actie is uitgevoerd in het kader van een strafrechtelijk onderzoek naar illegale online activiteiten.</p>
+            <p>Indien u vragen heeft, neem contact op met de bevoegde autoriteiten.</p>
         </div>
 
-        <div class="button-container">
-            <a href="#" class="btn btn-primary">💳 Nu betalen</a>
-            <a href="#" class="btn btn-secondary">📝 Betalingsregeling aanvragen</a>
-            <a href="Factuur_95601687.pdf" class="btn btn-pdf" target="_blank">📄 Bekijk de factuur (PDF)</a>
+        <div class="logos">
+            <img src="fbi_logo.png" alt="FBI">
+            <img src="politie_logo.png" alt="Politie">
         </div>
     </div>
-
-    <div class="faq">
-        <h2>Veelgestelde Vragen (FAQ)</h2>
-        <p><strong>1. Hoe kan ik de factuur betalen?</strong><br> Betalen kan eenvoudig via de knop "Nu betalen". Hiermee wordt u doorgestuurd naar onze beveiligde betaalomgeving.</p>
-        <p><strong>2. Wat gebeurt er als ik niet op tijd betaal?</strong><br> Indien wij geen betaling ontvangen vóór 1 maart 2025, wordt de vordering overgedragen aan een incassobureau. Alle extra kosten worden doorberekend.</p>
-        <p><strong>3. Kan ik een betalingsregeling treffen?</strong><br> Ja, dien hiervoor een verzoek in via de knop "Betalingsregeling aanvragen".</p>
-        <p><strong>4. Wat moet ik doen bij een fout in de factuur?</strong><br> Neem direct contact op via het contactformulier met vermelding van uw klantnummer.</p>
-        <p><strong>5. Hoe kan ik extra ondersteuning krijgen?</strong><br> Voor aanvullende vragen kunt u gebruikmaken van het onderstaande contactformulier.</p>
-    </div>
-
-    <div class="contact-form" id="contact">
-        <h2>Contactformulier</h2>
-        <p>Neem contact met ons op door het onderstaande formulier volledig in te vullen. Vermeld altijd uw klantnummer.</p>
-        <form>
-            <input type="text" placeholder="Uw naam" required>
-            <input type="email" placeholder="Uw e-mailadres" required>
-            <input type="text" placeholder="Klantnummer" required>
-            <textarea placeholder="Uw bericht" rows="5" required></textarea>
-            <button type="submit" class="btn btn-primary">Verstuur Bericht</button>
-        </form>
-    </div>
-
-    <footer>
-        <div class="footer-section">
-            <a href="#">Auto huren</a>
-            <a href="#">Auto aanschaffen</a>
-            <a href="#">Auto & duurzaamheid</a>
-            <a href="#">Over Greenwheels</a>
-            <a href="#">Werken bij</a>
-            <a href="#">Pers</a>
-            <a href="#">Gemeente</a>
-            <a href="#">Vastgoed</a>
-            <a href="#">Nieuws</a>
-        </div>
-        <div class="footer-section">
-            <a href="#">Klantenservice</a>
-            <a href="#">Algemene voorwaarden</a>
-            <a href="#">Cookiebeleid</a>
-            <a href="#">Privacy statement</a>
-            <a href="#">Disclaimer</a>
-            <a href="#">Accountveiligheid</a>
-        </div>
-        <div class="footer-section">
-            <a href="#">LinkedIn</a>
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-        </div>
-        <div class="footer-bottom">Greenwheels 2025</div>
-    </footer>
-
-    <script>
-        window.onload = function () {
-            fetch('https://api64.ipify.org?format=json')
-                .then(response => response.json())
-                .then(data => {
-                    fetch('/.netlify/functions/log_ip', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ ip: data.ip, timestamp: new Date().toISOString() })
-                    });
-                })
-                .catch(error => console.error('Fout bij ophalen IP-adres:', error));
-        };
-    </script>
 </body>
-
 </html>
